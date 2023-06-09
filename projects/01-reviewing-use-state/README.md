@@ -14,7 +14,7 @@ Le di un toque personal utilizando mi paleta de colores favoritos y otro tipo de
 
 ## Ejemplo de uso
 
-En el caso de que quieras ver el componente por tu cuenta, en tu navegador, debes clonar el repositorio en tu equipo local y luego dentro del proyecto:
+En el caso de que quieras ver el componente por tu cuenta, en tu navegador, debes clonar el repositorio en tu equipo local y luego dentro del proyecto, ejecuta los siguientes comandos:
 
 ```sh
 pnpm install 
