@@ -1,4 +1,4 @@
-![Twitter Follow Card](/public/tw-follow-card.png)
+![Twitter Follow Card](./public/tw-follow-card.png)
 
 # Twitter Follow Card
 
