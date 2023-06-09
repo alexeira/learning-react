@@ -9,10 +9,16 @@
   --border-radius-xs: 0.75rem;
 }
 
+.verified {
+  fill: #f4845f;
+  user-select: none;
+  width: 1rem;
+}
+
 .tw-follow-card {
   border: 0.1rem solid var(--bole);
   border-radius: var(--border-radius-xs);
-  width: 15rem;
+  max-width: 20rem;
   padding-block-start: .4rem;
 }
 
@@ -31,7 +37,7 @@ article a {
   color: #f4845f;
   padding: .5rem .7rem;
   display: block;
-  width: 15rem;
+  max-width: 20rem;
   border-bottom-left-radius: var(--border-radius-xs);
   border-bottom-right-radius: var(--border-radius-xs);
   cursor: pointer;
@@ -60,6 +66,7 @@ header {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  margin-inline-end: 2rem;
 }
 
 header img {
@@ -85,6 +92,10 @@ header div strong {
   color: var(--seal-brown);
   font-family: var(--dm-mono);
   cursor: pointer;
+  display: flex;
+  gap: .1rem;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 header div strong:hover {
@@ -99,17 +110,50 @@ header div span {
 
 aside button {
   cursor: pointer;
-  border: 0;
   padding: .3rem .8rem;
   border-radius: 100vh;
   letter-spacing: .03rem;
   font-size: var(--text-xs);
   font-family: var(--dm-sans);
-  background-color: var(--bole);
-  color: seashell;
 }
 
 aside button:hover {
   opacity: .9;
   transition: opacity 100ms linear;
+}
+
+.tw-follow-btn {
+  border: 0;
+  background-color: var(--bole);
+  color: seashell;
+}
+
+.tw-followed-btn {
+  display: block;
+  border: .1rem solid var(--bole);
+  color: var(--bole);
+}
+
+.tw-followed-btn:hover {
+  border: .1rem solid rgba(244, 33, 46, 0.7);
+  color: rgb(244, 33, 46);
+  background-color: rgba(244, 33, 46, 0.15);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.tw-followed-text {
+  display: block;
+}
+
+.tw-unfollow-text {
+  display: none;
+}
+
+.tw-followed-btn:hover .tw-followed-text {
+  display: none;
+}
+
+.tw-followed-btn:hover .tw-unfollow-text {
+  display: block;
 }
