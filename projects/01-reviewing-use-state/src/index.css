@@ -1,0 +1,26 @@
+:root {
+  --seashell: #fff5ee;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--seashell);
+  scroll-behavior: smooth;
+}
+
+main {
+  margin: auto;
+  padding: 1.5rem;
+  max-width: 60ch;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}

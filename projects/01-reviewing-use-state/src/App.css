@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans&display=swap');
+
+:root {
+  --seal-brown: #572d1c;
+  --bole: #773f29;
+  --dm-sans: 'DM Sans', sans-serif;
+  --dm-mono: 'DM Mono', monospace;
+  --text-xs: .7rem;
+  --border-radius-xs: 0.75rem;
+}
+
+.tw-follow-card {
+  border: 0.1rem solid var(--bole);
+  border-radius: var(--border-radius-xs);
+  width: 15rem;
+  padding-block-start: .4rem;
+}
+
+article .tw-u-might {
+  margin: 0;
+  padding-inline: .7rem;
+  padding-block-end: .4rem;
+  font-family: var(--dm-sans);
+  color: var(--seal-brown);
+  font-size: .9rem;
+}
+
+article a {
+  font-size: var(--text-xs);
+  font-family: var(--dm-sans);
+  color: #f4845f;
+  padding: .5rem .7rem;
+  display: block;
+  width: 15rem;
+  border-bottom-left-radius: var(--border-radius-xs);
+  border-bottom-right-radius: var(--border-radius-xs);
+  cursor: pointer;
+}
+
+article a:hover {
+  background-color: rgba(255, 230, 213, 0.672);
+  transition: background-color 100ms linear;
+}
+
+article section {
+  padding: .5rem .8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: var(--text-xs);
+}
+
+article section:hover {
+  background-color: rgba(255, 230, 213, 0.672);
+  transition: background-color 100ms linear;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+header img {
+  max-width: 100%;
+  display: block;
+  border-radius: 100vh;
+  width: 1.75rem;
+  box-shadow: rgba(65, 26, 10, 0.03) 0px 0px 2px inset;
+}
+
+header img:hover {
+  opacity: .95;
+  transition: opacity 100ms linear;
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+  margin-inline-start: .3rem;
+}
+
+header div strong {
+  color: var(--seal-brown);
+  font-family: var(--dm-mono);
+  cursor: pointer;
+}
+
+header div strong:hover {
+  text-decoration: underline;
+}
+
+header div span {
+  color: var(--bole);
+  font-family: var(--dm-sans);
+  opacity: .8;
+}
+
+aside button {
+  cursor: pointer;
+  border: 0;
+  padding: .3rem .8rem;
+  border-radius: 100vh;
+  letter-spacing: .03rem;
+  font-size: var(--text-xs);
+  font-family: var(--dm-sans);
+  background-color: var(--bole);
+  color: seashell;
+}
+
+aside button:hover {
+  opacity: .9;
+  transition: opacity 100ms linear;
+}
