@@ -1,5 +1,19 @@
 import { TURNS, WINNER_COMBOS } from '../constants'
 
+// funcion para guardar la partida en el local-storage
+function saveGame (newBoard, newTurn) {
+  // guardamos el estado actual de la tabla
+  window.localStorage.setItem('board', JSON.stringify(newBoard))
+  // guardamos el estado actual del turno
+  window.localStorage.setItem('turn', newTurn)
+}
+
+// funcion para resetear la partida en el local storage tambien
+export function resetGameStorage () {
+  window.localStorage.removeItem('board')
+  window.localStorage.removeItem('turn')
+}
+
 export function checkWinner (boardToCheck) {
   for (const combo of WINNER_COMBOS) {
     const [a, b, c] = combo
@@ -35,9 +49,12 @@ export function updateBoard (board, index, winner, turn, setBoard, setTurn, setW
   // usamos setTurn para actualizar el estado del turno actual
   setTurn(newTurn)
 
+  // guardamos la partida antes de que haya un ganador
+  saveGame(newBoard, newTurn)
+
   // checkeamos si hay un ganador
   const newWinner = checkWinner(newBoard)
   // si tenemos un ganador, actualizamos el estado de winner
   if (newWinner) return setWinner(newWinner)
-  else if (checkEndGame(newBoard)) return setWinner(false)
+  if (checkEndGame(newBoard)) return setWinner(false)
 }
