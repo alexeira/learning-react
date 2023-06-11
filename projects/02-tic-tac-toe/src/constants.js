@@ -1,6 +1,6 @@
 export const TURNS = {
-  X: 'X',
-  O: 'O'
+  X: 'x',
+  O: 'o'
 }
 
 export const WINNER_COMBOS = [
@@ -13,3 +13,11 @@ export const WINNER_COMBOS = [
   [0, 4, 8],
   [2, 4, 6]
 ]
+
+export const borderClass = {
+  1: ['border-lr'],
+  3: ['border-tb'],
+  4: ['border-all'],
+  5: ['border-tb'],
+  7: ['border-lr']
+}
