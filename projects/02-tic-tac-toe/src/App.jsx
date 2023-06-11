@@ -9,6 +9,7 @@ import { TURNS } from './constants'
 import { resetGameStorage, updateBoard } from './logic/board'
 import WinnerModal from './components/WinnerModal'
 import Board from './components/Board'
+import Victories from './components/Victories'
 
 export default function App () {
   const [winner, setWinner] = useState(null)
@@ -39,12 +40,16 @@ export default function App () {
     <main className='board'>
       <h1>Tic Tac Toe</h1>
 
-      <ResetGameButton resetGame={resetGame} />
-      <Board board={board} handleUpdateBoard={handleUpdateBoard} />
-
       <section className='turn'>
         <Square isSelected={turn === TURNS.X}>{TURNS.X}</Square>
         <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square>
+      </section>
+
+      <Board board={board} handleUpdateBoard={handleUpdateBoard} />
+
+      <section className='victories'>
+        <Victories winner={winner} />
+        <ResetGameButton resetGame={resetGame} />
       </section>
 
       <WinnerModal winner={winner} resetGame={resetGame} />
