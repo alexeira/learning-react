@@ -3,6 +3,11 @@ export const TURNS = {
   O: 'o'
 }
 
+export const VICTORIES = {
+  x: 0,
+  o: 0
+}
+
 export const WINNER_COMBOS = [
   [0, 1, 2],
   [3, 4, 5],
