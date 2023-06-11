@@ -26,6 +26,7 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -38,7 +39,7 @@ body {
 
 .board {
   width: fit-content;
-  margin: 40px auto;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -51,11 +52,10 @@ body {
 
 .board button {
   padding: 8px 12px;
-  margin: 25px 0 35px;
   background-color: var(--bole);
   border: 2px solid transparent;
   color: var(--seashell);
-  width: 100px;
+  width: 70px;
   border-radius: 5px;
   transition: 0.2s;
   font-weight: bold;
@@ -159,4 +159,16 @@ body {
 .border-tb {
   border-top: var(--border-bole);
   border-bottom: var(--border-bole);
+}
+
+.victories {
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.victories h3 {
+  font-family: var(--dm-sans);
+  font-size: 32px;
 }
