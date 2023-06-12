@@ -14,7 +14,7 @@ export function resetGameStorage () {
   window.localStorage.removeItem('turn')
 }
 
-export function checkWinner (boardToCheck) {
+function checkWinner (boardToCheck) {
   for (const combo of WINNER_COMBOS) {
     const [a, b, c] = combo
     if (
@@ -22,10 +22,10 @@ export function checkWinner (boardToCheck) {
       boardToCheck[a] === boardToCheck[b] &&
       boardToCheck[a] === boardToCheck[c]
     ) {
-      return boardToCheck[a]
+      return { newWinner: boardToCheck[a], winnerCombo: combo }
     }
   }
-  return null
+  return { newWinner: null, winnerCombo: null }
 }
 
 export function checkEndGame (newBoard) {
@@ -34,8 +34,8 @@ export function checkEndGame (newBoard) {
   return newBoard.every((square) => square !== null)
 }
 
-export function updateBoard (board, index, winner, turn, setBoard, setTurn, setWinner) {
-  // condicion para no volver a repetir un valor en una posicion que ya tiene un valor establecido
+export function updateBoard (board, index, winner, turn, setBoard, setTurn, setWinner, setWinnerCombo) {
+  // condicion para no volver a repetir un valor en una posicion, que ya tiene un valor establecido
   if (board[index] || winner) return
   // creamos una variable de la tabla para no mutar el estado
   const newBoard = [...board]
@@ -53,8 +53,14 @@ export function updateBoard (board, index, winner, turn, setBoard, setTurn, setW
   saveGame(newBoard, newTurn)
 
   // checkeamos si hay un ganador
-  const newWinner = checkWinner(newBoard)
-  // si tenemos un ganador, actualizamos el estado de winner
-  if (newWinner) return setWinner(newWinner)
-  if (checkEndGame(newBoard)) return setWinner(false)
+  const { newWinner, winnerCombo } = checkWinner(newBoard)
+  // si tenemos un ganador, actualizamos el estado de winner y guardamos el combo ganador
+  if (newWinner) {
+    setWinner(newWinner)
+    setWinnerCombo(winnerCombo)
+  }
+  if (checkEndGame(newBoard)) {
+    setWinner(false)
+    setWinnerCombo(null)
+  }
 }
