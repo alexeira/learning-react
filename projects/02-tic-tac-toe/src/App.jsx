@@ -10,9 +10,11 @@ import { resetGameStorage, updateBoard } from './logic/board'
 import WinnerModal from './components/WinnerModal'
 import Board from './components/Board'
 import Victories from './components/Victories'
+import WinnerLine from './components/WinnerLine'
 
 export default function App () {
   const [winner, setWinner] = useState(null)
+  const [winnerCombo, setWinnerCombo] = useState(null)
 
   const [turn, setTurn] = useState(() => {
     const turnFromStorage = window.localStorage.getItem('turn')
@@ -26,7 +28,7 @@ export default function App () {
   })
 
   function handleUpdateBoard (index) {
-    updateBoard(board, index, winner, turn, setBoard, setTurn, setWinner)
+    updateBoard(board, index, winner, turn, setBoard, setTurn, setWinner, setWinnerCombo)
   }
 
   function resetGame () {
@@ -46,13 +48,14 @@ export default function App () {
       </section>
 
       <Board board={board} handleUpdateBoard={handleUpdateBoard} />
+      <WinnerLine winnerCombo={winnerCombo} />
 
       <section className='victories'>
         <Victories winner={winner} />
         <ResetGameButton resetGame={resetGame} />
       </section>
 
-      <WinnerModal winner={winner} resetGame={resetGame} />
+      {/* <WinnerModal winner={winner} resetGame={resetGame} /> */}
     </main>
   )
 }
