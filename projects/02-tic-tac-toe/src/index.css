@@ -149,7 +149,6 @@ body {
 .border-lr {
   border-left: var(--border-bole);
   border-right: var(--border-bole);
-
 }
 
 .border-all {
