@@ -10,7 +10,10 @@ import { resetGameStorage, updateBoard } from './logic/board'
 import WinnerModal from './components/WinnerModal'
 import Board from './components/Board'
 import Victories from './components/Victories'
-import WinnerLine from './components/WinnerLine'
+import ShouldRender from './components/ShouldRender'
+import Horizontal from './components/lines/Horizontal'
+import Vertical from './components/lines/Vertical'
+import Diagonal from './components/lines/Diagonal'
 
 export default function App () {
   const [winner, setWinner] = useState(null)
@@ -35,6 +38,7 @@ export default function App () {
     setBoard(Array(9).fill(null))
     setTurn(TURNS.X)
     setWinner(null)
+    setWinnerCombo(null)
     resetGameStorage()
   }
 
@@ -47,15 +51,15 @@ export default function App () {
         <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square>
       </section>
 
-      <Board board={board} handleUpdateBoard={handleUpdateBoard} />
-      <WinnerLine winnerCombo={winnerCombo} />
+      <Board board={board} handleUpdateBoard={handleUpdateBoard} winnerCombo={winnerCombo} />
 
       <section className='victories'>
         <Victories winner={winner} />
         <ResetGameButton resetGame={resetGame} />
       </section>
 
-      {/* <WinnerModal winner={winner} resetGame={resetGame} /> */}
+      <WinnerModal winner={winner} resetGame={resetGame} />
+
     </main>
   )
 }
