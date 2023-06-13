@@ -1,7 +1,8 @@
 import { borderClass } from '../constants'
 import Square from './Square'
+import WinnerLine from './WinnerLine'
 
-export default function Board ({ board, handleUpdateBoard }) {
+export default function Board ({ board, handleUpdateBoard, winnerCombo }) {
   function getBorders (index) {
     return borderClass[index] || []
   }
@@ -22,6 +23,7 @@ export default function Board ({ board, handleUpdateBoard }) {
           )
         })
       }
+      <WinnerLine winnerCombo={winnerCombo} />
     </section>
   )
 }
