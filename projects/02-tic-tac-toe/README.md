@@ -25,7 +25,7 @@ Adicionalmente tanto la partida como las victorias guardan su estado gracias al 
 
 ## Como probarlo
 
-Puedes ver el resultado en este [link]().
+Puedes ver el resultado en este [link](https://tic-tac-toe-eta-five-21.vercel.app/).
 
 Pero en el caso de que quieras ver el componente por tu cuenta, en tu navegador, debes clonar el repositorio en tu equipo local y luego dentro del proyecto, ejecuta los siguientes comandos:
 
