@@ -11,7 +11,7 @@ En esta ocación no solo utilice mi paleta de colores y tipografía favorita, si
 Aqui un foto de como se veia al inicio y cual fue el resultado final.
 
 <p align="center">
-  <img src=".public/default-style.png" alt="Tic Tac Toe" >
+  <img src="./public/default-tic-tac-toe.png" alt="Tic Tac Toe" >
   <img src="./public/custom-style.png" alt="Tic Tac Toe" >
 </p>
 
