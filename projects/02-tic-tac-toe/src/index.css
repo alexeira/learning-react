@@ -183,15 +183,50 @@ body {
 }
 
 .line {
+  position: relative;
   stroke-dasharray: 254;
   stroke-dashoffset: 254;
   animation: drawLine 500ms ease-in-out forwards;
 }
 
+.vertical {
+  top: 25px
+}
+
+.horizontal {
+  top: 39px;
+}
+
+.x2 {
+  top: 139px;
+}
+
+.x3 {
+  top: 239px;
+}
+
+.diagonal {
+  top: 25px;
+}
+
+.y1 {
+  right: 100px;
+}
+
+.y3 {
+  left: 100px;
+}
+
 .diagonal-line {
-  stroke-dasharray: 303.635;
-  stroke-dashoffset: 303.635;
+  position: relative;
+  top: 25px;
+  stroke-dasharray: 355.536;
+  stroke-dashoffset: 355.536;
   animation: drawLineDiagonal 500ms ease-in-out forwards;
+}
+
+.inverted-diagonal {
+  transform: rotate(90deg);
 }
 
 @keyframes drawLine {
@@ -206,7 +241,7 @@ body {
 
 @keyframes drawLineDiagonal {
   from {
-    stroke-dashoffset: 303.635;
+    stroke-dashoffset: 355.536;
   }
 
   to {
