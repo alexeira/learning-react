@@ -1,4 +1,6 @@
-![Tic Tac Toe](./public/header-ss.png)
+<p align="center">
+  <img src="./public/header-ss.png" alt="Tic Tac Toe">
+</p>
 
 # Tic Tac Toe
 
@@ -8,7 +10,10 @@ En esta ocación no solo utilice mi paleta de colores y tipografía favorita, si
 
 Aqui un foto de como se veia al inicio y cual fue el resultado final.
 
-![Tic Tac Toe Default](./public/default-style.png) ➡️ ![Tic Tac Toe](./public/custom-style.png) 
+<p align="center">
+  <img src="./public/default-style.png" alt="Tic Tac Toe" >
+  <img src="./public/custom-style.png" alt="Tic Tac Toe" >
+</p>
 
 Adicionalmente tanto la partida como las victorias guardan su estado gracias al `localStorage`.
 
@@ -29,4 +34,4 @@ pnpm install
 pnpm dev
 ```
 
-¡Listo! ahora podras ver el componente en el puerto [`localhost:5173`](http://localhost:5173/).
+¡Listo! ahora podras ver la aplicación en el puerto [`localhost:5173`](http://localhost:5173/).
