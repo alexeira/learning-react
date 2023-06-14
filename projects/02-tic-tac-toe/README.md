@@ -11,7 +11,7 @@ En esta ocación no solo utilice mi paleta de colores y tipografía favorita, si
 Aqui un foto de como se veia al inicio y cual fue el resultado final.
 
 <p align="center">
-  ![default-style](https://github.com/alexeira/learning-react/assets/102609365/2c0852d3-564e-4132-a8ef-f31fb378342a)
+  <img src=".public/default-style.png" alt="Tic Tac Toe" >
   <img src="./public/custom-style.png" alt="Tic Tac Toe" >
 </p>
 
