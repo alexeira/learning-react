@@ -10,10 +10,6 @@ import { resetGameStorage, updateBoard } from './logic/board'
 import WinnerModal from './components/WinnerModal'
 import Board from './components/Board'
 import Victories from './components/Victories'
-import ShouldRender from './components/ShouldRender'
-import Horizontal from './components/lines/Horizontal'
-import Vertical from './components/lines/Vertical'
-import Diagonal from './components/lines/Diagonal'
 
 export default function App () {
   const [winner, setWinner] = useState(null)
