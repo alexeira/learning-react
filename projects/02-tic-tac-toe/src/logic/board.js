@@ -28,10 +28,14 @@ function checkWinner (boardToCheck) {
   return { newWinner: null, winnerCombo: null }
 }
 
-export function checkEndGame (newBoard) {
+export function checkTie (newBoard) {
   // si todas las posiciones de board son diferentes de null
   // significa que el juego termino y no hubo ganador, por ende es empate
-  return newBoard.every((square) => square !== null)
+  const isFull = newBoard.every((square) => square !== null)
+
+  const { newWinner } = checkWinner(newBoard)
+
+  return isFull && newWinner === null && newBoard.length === 9
 }
 
 export function updateBoard (board, index, winner, turn, setBoard, setTurn, setWinner, setWinnerCombo) {
@@ -59,7 +63,7 @@ export function updateBoard (board, index, winner, turn, setBoard, setTurn, setW
     setWinner(newWinner)
     setWinnerCombo(winnerCombo)
   }
-  if (checkEndGame(newBoard)) {
+  if (checkTie(newBoard)) {
     setWinner(false)
     setWinnerCombo(null)
   }
