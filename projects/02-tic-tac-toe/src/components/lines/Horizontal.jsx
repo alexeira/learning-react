@@ -1,11 +1,11 @@
-export default function Horizontal () {
+export default function Horizontal ({ customStyle }) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={254}
       height={4}
       fill='none'
-      className='line'
+      className={`line horizontal ${customStyle}`}
     >
       <path
         stroke='#572D1C'

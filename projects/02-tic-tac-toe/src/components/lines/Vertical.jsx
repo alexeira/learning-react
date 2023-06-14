@@ -1,11 +1,11 @@
-export default function Vertical () {
+export default function Vertical ({ customStyle }) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
       width={4}
       height={254}
       fill='none'
-      className='line'
+      className={`line vertical ${customStyle}`}
     >
       <path
         stroke='#572D1C'
