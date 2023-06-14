@@ -9,7 +9,7 @@ export default function WinnerModal ({ winner, resetGame }) {
   const tie = <span>🤝</span>
 
   return (
-    <ShouldRender delay={5000}>
+    <ShouldRender delay={1700}>
       <section className='winner'>
         <div className='text'>
           <h2>{winnerText}</h2>
