@@ -26,3 +26,7 @@ img {
   max-width: 100%;
   width: 360px;
 }
+
+p {
+  padding: 1rem;
+}
