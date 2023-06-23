@@ -15,8 +15,38 @@ html {
 div {
   display: grid;
   place-items: center;
+  width: 100%;
 }
 
 h1 {
   text-decoration: underline;
+}
+
+main {
+  max-width: 100ch;
+  width: 100%;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.movie {
+  text-align: center;
+}
+
+.movie h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie img {
+  display: block;
+  max-width: 100%;
 }
