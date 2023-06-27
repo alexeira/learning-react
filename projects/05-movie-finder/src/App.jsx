@@ -3,11 +3,12 @@ import useMovies from './hooks/useMovies'
 import useSearch from './hooks/useSearch'
 
 export default function App () {
-  const { movies } = useMovies()
   const { search, updateSearch, error } = useSearch()
+  const { movies, getMovies } = useMovies({ search })
 
   function handleSubmit (event) {
     event.preventDefault()
+    getMovies()
   }
 
   function handleChange (event) {
