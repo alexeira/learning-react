@@ -1,15 +1,14 @@
 import useEllipsisTooltip from '../hooks/useEllipsisTooltip'
 
 export default function Movies ({ movies }) {
-  const { ref: titleRef, tooltip, setTooltip } = useEllipsisTooltip()
+  const { tooltip, checkEllipsis } = useEllipsisTooltip()
 
   return (
     <ul className='movies'>
-      {movies.map((movie) => (
+      {movies && movies.map((movie) => (
         <li className='movie' key={movie.id}>
           <h3
-            ref={titleRef}
-            onMouseOut={() => setTooltip(false)}
+            onMouseOver={checkEllipsis}
             title={tooltip ? movie.title : undefined}
           >
             {movie.title}
