@@ -58,7 +58,7 @@ Para utilizarlo basta con importar el custom hook
 const { tooltip, checkEllipsis } = useEllipsisTooltip()
 ```
 
-Luego llamamos a la función `checkEllipsis` en la propiedad `onMouseOver` y hacemos una condición para establecer que cuando `tooltip` este activo se muestre el mismo titulo de la película en la propiedad `title`
+Luego llamamos a la función `checkEllipsis` en la propiedad `onMouseOver` y hacemos una condición para establecer que cuando `tooltip` este activo se muestre el mismo titulo de la película en la propiedad `title`.
 
 ```jsx
 <h3
