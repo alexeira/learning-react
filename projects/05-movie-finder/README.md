@@ -17,5 +17,5 @@ Requerimientos:
 Primera iteración:
 
 [X] Evitar que se haga la misma búsqueda dos veces seguidas.
-- Haz que la búsqueda se haga automáticamente al escribir.
-- Evita que se haga la búsqueda continuamente al escribir (debounce).
+[X] Haz que la búsqueda se haga automáticamente al escribir.
+[X] Evita que se haga la búsqueda continuamente al escribir (debounce).
