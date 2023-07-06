@@ -4,7 +4,7 @@ Proyecto para prácticar conceptos de `React` en el cuál creamos un Ecommerce y
 
 ## Ecommerce
 
-- Muestra una lista de productos que vienen de un JSON.
+✅ Muestra una lista de productos que vienen de un JSON.
 - Añade un filtro por categoría.
 - Añade un filtro por precio.
 - Haz uso de un `useContext` para evitar pasar props innecesarias.
