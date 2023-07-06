@@ -1,11 +1,20 @@
+import { useFilters } from './hooks/useFilters'
+
+import { products as initialProducts } from './mocks/products.json'
+
 import { Products } from './components/Products'
-import { products } from './mocks/products.json'
+import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 
 export default function App () {
+  const { filterProducts } = useFilters()
+  const filteredProducts = filterProducts({ initialProducts })
+
   return (
-    <div>
-      <h1>Ecommerce</h1>
-      <Products products={products} />
-    </div>
+    <>
+      <Header />
+      <Products products={filteredProducts} />
+      <Footer />
+    </>
   )
 }
