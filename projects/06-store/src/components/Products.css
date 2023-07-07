@@ -41,3 +41,17 @@
   object-fit: cover;
   background: #fff;
 }
+
+.products div button {
+  outline: none;
+}
+
+.is-in-the-cart {
+  background-color: #e63946;
+  transition: background-color 300ms ease-in-out;
+}
+
+.is-not-in-the-cart {
+  background-color: #457b9d;
+  transition: background-color 300ms ease-in-out;
+}
