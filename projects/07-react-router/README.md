@@ -1,8 +1,8 @@
 # Crea un React Router desde cero
 
-- [ ] Crea una forma de hacer MPAs (Multiple Page Application)
-- [ ] Crea una forma de hacer SPAs (Singles Page Application)
-- [ ] Poder navegar entre páginas con el botón de atrás
+- [X] Crea una forma de hacer MPAs (Multiple Page Application)
+- [X] Crea una forma de hacer SPAs (Singles Page Application)
+- [X] Poder navegar entre páginas con el botón de atrás
 - [ ] Crear componente link para hacerlo declarativo
 - [ ] Crear componente Router para hacerlo más declarativo
 - [ ] Soportar ruta por defecto (404)
