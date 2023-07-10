@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans&display=swap');
+
+:root {
+  --bg-color: #fff5ee;
+  --primary-color: #572d1c;
+  --secondary-color: #773f29;
+  --dm-mono: 'DM Mono', monospace;
+  --dm-sans: 'DM Sans', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background: var(--bg-color);
+  color: var(--primary-color);
+  font-size: 16px;
+  margin: 0;
+}
+
+h1 {
+  font-family: var(--dm-mono);
+  vertical-align: center;
+}
+
+main {
+  margin: 0 auto;
+  padding-inline: 2rem;
+  width: 100%;
+  max-width: 80ch;
+}
+
+p {
+  font-family: var(--dm-sans);
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+a {
+  font-family: var(--dm-sans);
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: underline solid var(--primary-color) .09rem;
+  text-underline-offset: .1rem;
+  transition: all .1s ease;
+}
+
+a:hover {
+  background-color: #f7b88b;
+  border-radius: .25rem;
+}
+
+.practice {
+  padding: .1rem 1rem;
+  text-align: center;
+  vertical-align: middle;
+  margin-inline: .5rem;
+  font-size: 11px;
+  font-family: var(--dm-mono);
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  border-radius: 100vh;
+}
