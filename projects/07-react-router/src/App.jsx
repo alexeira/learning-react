@@ -1,32 +1,24 @@
-import { useEffect, useState } from 'react'
-import { events } from './constants/events'
 import { HomePage } from './pages/Home'
 import { AboutPage } from './pages/About'
+import { Router } from './components/Router'
+import { Page404 } from './pages/404.jsx'
 
-const { pushstate, popstate } = events
+const routes = [
+  {
+    path: '/',
+    Component: HomePage
+  },
+  {
+    path: '/about',
+    Component: AboutPage
+  }
+]
 
 export default function App () {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname)
-
-  useEffect(() => {
-    const onLocationChange = () => {
-      setCurrentPath(window.location.pathname)
-    }
-
-    window.addEventListener(pushstate, onLocationChange)
-    window.addEventListener(popstate, onLocationChange)
-
-    return () => {
-      window.removeEventListener(pushstate, onLocationChange)
-      window.removeEventListener(popstate, onLocationChange)
-    }
-  }, [])
-
   return (
     <main>
       <h1>React Router<code className='practice'>for practice</code></h1>
-      {currentPath === '/' && <HomePage />}
-      {currentPath === '/about' && <AboutPage />}
+      <Router routes={routes} defaultComponent={Page404} />
     </main>
   )
 }
