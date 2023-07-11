@@ -1,4 +1,4 @@
-import { events } from './constants/events'
+import { events } from '../constants/events'
 
 const { pushstate } = events
 
